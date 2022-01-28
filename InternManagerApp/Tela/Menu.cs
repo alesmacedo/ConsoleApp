@@ -20,7 +20,7 @@ namespace Tela
         {
             while (true)
             {
-                string mensagem = "Olá, usuário, bem vindo ao programa" +
+                string mensagem = "Olá! usuário, bem vindo ao programa" +
                     "\n\n    Utilizando programação funcional." +
                     "\n\n" +
                     "\n    Digite uma das opções abaixo:" +
