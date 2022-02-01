@@ -1,5 +1,6 @@
 ﻿using Classes;
 using System;
+using Tela;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,8 +9,8 @@ using System.Threading.Tasks;
 namespace Funcoes
 {
     class TelaEstagiario
-    {
-        public static void Chamar()
+    { 
+        public static void DisplayAppOptions()
         {
             Console.WriteLine("================== Cadastro de estagiário ==================");
             while (true)
@@ -26,35 +27,38 @@ namespace Funcoes
 
                 if (valor == 0)
                 {
+                    Console.Clear();
+                    Menu.Criar();
+
                     break;
                 }
-                else if(valor == 1)
+                else if (valor == 1)
                 {
                     var estagiario = new Estagiario();
+                    Console.Clear();
                     Console.WriteLine("Digite o nome do estagiário: ");
                     estagiario.Nome = Console.ReadLine() ?? string.Empty;
 
                     /* Operador ternário = Se for ?? verificará se é o primeiro valor será null ou não, caso seja, definirá o direito
-                     * https://docs.microsoft.com/pt-br/dotnet/csharp/language-reference/operators/null-coalescing-operator */ 
+                     * https://docs.microsoft.com/pt-br/dotnet/csharp/language-reference/operators/null-coalescing-operator */
 
                     Console.WriteLine("Informe a idade do estagiário:  ");
-                    estagiario.Idade = Console.ReadLine();
+                    estagiario.Idade = Console.ReadLine() ?? string.Empty;
 
                     Console.WriteLine("Digite a squad na qual o estagiário pertence: ");
-                    estagiario.Squad = Console.ReadLine();
+                    estagiario.Squad = Console.ReadLine() ?? string.Empty;
 
                     Console.WriteLine("Digite o líder responsável pelo estagiário: ");
-#pragma warning disable CS8601 // Possible null reference assignment.
-                    estagiario.Lider = Console.ReadLine();
-#pragma warning restore CS8601 // Possible null reference assignment.
-                   
+                    estagiario.Lider = Console.ReadLine() ?? string.Empty;
+
 
                     estagiario.Gravar();
 
                     estagiario.Deletar();
                 }
-                else if(valor == 2)
+                else if (valor == 2)
                 {
+                    Console.Clear();
                     var estagiarios = Estagiario.LerEstagiarios();
                     foreach (Estagiario c in estagiarios)
                     {
@@ -67,17 +71,24 @@ namespace Funcoes
                         Console.Write("Líder: ");
                         Console.WriteLine(c.Lider);
 
-                        Console.WriteLine("============================================================");
+                        Console.WriteLine("==========================================================");
                     }
                 }
                 else if (valor == 3)
                 {
-                   
+                    Console.Clear();
                     Console.Write("Digite o nome e sobrenome do estagiário que deseja deletar: ");
-                    
-                    Console.WriteLine("Você deletou o estagiário");
+                    Console.ReadLine();
+                    Console.Clear();
+                    Console.WriteLine("Estagiário deletado com sucesso!");
+                    Console.ReadKey();
                 }
-                Console.ReadLine();
+                else 
+                {
+                    Console.Clear();
+                    Console.WriteLine("Opção inválida, pressione 'enter' para retornar ao menu de gerenciamento.");
+                    Console.ReadLine();
+                }
             }
         }
     }

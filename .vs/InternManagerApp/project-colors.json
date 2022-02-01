@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "2bd6f7cf-3d58-45f3-9eda-8a5b21b1798e": {
+      "ProjectGuid": "2bd6f7cf-3d58-45f3-9eda-8a5b21b1798e",
+      "DisplayName": "Solution Items",
+      "ColorIndex": 0
+    },
+    "f6036108-e502-444c-8b9d-bb8a99810219": {
+      "ProjectGuid": "f6036108-e502-444c-8b9d-bb8a99810219",
+      "DisplayName": "InternManagerApp",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

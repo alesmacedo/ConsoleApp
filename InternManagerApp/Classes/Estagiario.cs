@@ -46,8 +46,6 @@ namespace Classes
         public string Squad;
         public string Lider;
 
-        private string sobrenome = "Santos";
-
         public void Gravar()
         {
             var estagiarios = Estagiario.LerEstagiarios();
@@ -66,10 +64,19 @@ namespace Classes
         }
 
         public void Deletar()
-      
-
         {
-           
+            var estagiarios = Estagiario.LerEstagiarios();
+            estagiarios.Remove(this);
+            if (File.Exists(caminhoBaseEstagiarios()))
+            {
+                File.Delete(caminhoBaseEstagiarios());
+                foreach(Estagiario c in estagiarios)
+                    
+                {
+                    var linha = c.Nome + ";" + c.Idade + ";" + c.Squad + ";" + c.Lider + ";";
+                   
+                }
+            }
         }
 
         private static string caminhoBaseEstagiarios()

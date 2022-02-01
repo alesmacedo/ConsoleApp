@@ -1,5 +1,4 @@
 ﻿using System.Configuration;
-using Calculo;
 using Diretorio;
 using Funcoes;
 using System;
@@ -17,6 +16,7 @@ namespace InternManagerApp
         static void Main(string[] args)
         {
             Menu.Criar();
+            
         }
     }
 }
