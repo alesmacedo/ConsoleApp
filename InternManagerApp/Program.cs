@@ -1,5 +1,4 @@
 ﻿using System.Configuration;
-using Diretorio;
 using Funcoes;
 using System;
 using System.Collections.Generic;
@@ -7,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Tela;
-using Classes;
+using System.Data.SqlClient;
 
 namespace InternManagerApp
 {
@@ -16,7 +15,6 @@ namespace InternManagerApp
         static void Main(string[] args)
         {
             Menu.Criar();
-            
         }
     }
 }

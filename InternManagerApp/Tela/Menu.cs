@@ -1,5 +1,4 @@
-﻿using Diretorio;
-using Funcoes;
+﻿using Funcoes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,13 +14,14 @@ namespace Tela
 
             while (true)
             {
-                string mensagem = "Olá! Seja bem vindo!" +
+                string mensagem = "================== Menu Principal ==================\n" +
                     "\n    Digite uma das opções abaixo:" +
                     "\n      0 - Sair do programa" +
-                    "\n      1 - Acessar tela de gerenciamento de estagiário";
+                    "\n      1 - Acessar tela para" +
+                    " gerenciamento de estagiário";
                 Console.WriteLine(mensagem);
 
-                int valor = int.Parse(Console.ReadLine());
+                int valor = int.Parse(Console.ReadLine() ?? String.Empty);
 
                 if (valor == 0)
                 {
