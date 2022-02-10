@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InternManagerApp.Repositorio
+namespace Repositorio
 {
     public class EstagiarioRepositorio
     {

@@ -1,2 +1,3 @@
 InternManagerApp/bin/
-InternManagerApp/obj/
+InternManagerApp/obj/.vs
+.vs/InternManagerApp

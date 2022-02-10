@@ -35,7 +35,7 @@ namespace Tela
                 }
                 else
                 {
-                    Console.WriteLine("Opção inválida, digite novamente.");
+                    Console.WriteLine("Opção inválida, digite novamente.\n");
                 }
             }
         }
