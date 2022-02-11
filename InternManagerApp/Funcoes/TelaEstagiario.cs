@@ -15,44 +15,42 @@ namespace Funcoes
         public static void DisplayAppOptions()
         {
             Console.WriteLine("================== Cadastro de estagiário ==================");
-            while (true)
-            {
-                string mensagem = "\n     Digite uma das opções abaixo:" +
-                    "\n      0 - Voltar ao menu principal" +
-                    "\n      1 - Cadastrar estagiário" +
-                    "\n      2 - Listar estagiários" +
-                    "\n      3 - Deletar estagiário";
+            Console.WriteLine("\n     Digite uma das opções abaixo:");
+            Console.WriteLine("      0 - Voltar ao menu principal");
+            Console.WriteLine("      1 - Cadastrar estagiário");
+            Console.WriteLine("      2 - Listar estagiários");
+            Console.WriteLine("      3 - Deletar estagiário");
 
-                Console.WriteLine(mensagem);
+            string valor = Console.ReadLine() ?? String.Empty;
 
-                int valor = int.Parse(Console.ReadLine() ?? String.Empty);
-
-                if (valor == 0)
+                switch (valor)
                 {
+                case "0":
                     Console.Clear();
                     Menu.Criar();
 
                     break;
-                }
-                else if (valor == 1) //CREATE
-                {
+                
+                case "1":  //CREATE
+                
                     estagiarioRepositorio.Create();
-                }
-                else if (valor == 2) //LIST
-                {
+                    break;
+                case "2": //LIST
+                
                     estagiarioRepositorio.List();
+                    break;
 
-                }
-                else if (valor == 3) //DELETE
-                {
+                case "3":  //DELETE
+                
                     estagiarioRepositorio.Delete();
-                }
-                else
-                {
+                    break;
+                default:
+                
                     Console.Clear();
-                    Console.WriteLine("Opção inválida, pressione 'enter' para retornar ao menu de gerenciamento.");
+                    Console.WriteLine("Você digitou uma opção inválida, tente novamente.\n");
+                    TelaEstagiario.DisplayAppOptions();
                     Console.ReadLine();
-                }
+                    break;
             }
         }
     }
