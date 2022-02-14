@@ -15,17 +15,19 @@ namespace Tela
             while (true)
             {
                 string mensagem = "================== Menu Principal ==================\n" +
-                    "\n    Digite uma das opções abaixo:" +
+                    "\n                OLÁ, SEJA BEM VINDO!" +
                     "\n      0 - Sair do programa" +
                     "\n      1 - Acessar tela para" +
                     " gerenciamento de estagiário";
                 Console.WriteLine(mensagem);
 
+                Console.Write("\n    Digite uma das opções abaixo para prosseguir: ");
+
                 int valor = int.Parse(Console.ReadLine() ?? String.Empty);
 
                 if (valor == 0)
                 {
-                    break;
+                    Environment.Exit(0);
                 }
                 else if (valor == 1)
                 {

@@ -14,12 +14,12 @@ namespace Funcoes
         static EstagiarioRepositorio estagiarioRepositorio = new EstagiarioRepositorio();
         public static void DisplayAppOptions()
         {
-            Console.WriteLine("================== Cadastro de estagiário ==================");
-            Console.WriteLine("\n     Digite uma das opções abaixo:");
+            Console.WriteLine("================== Cadastro de estagiário ==================\n");
             Console.WriteLine("      0 - Voltar ao menu principal");
             Console.WriteLine("      1 - Cadastrar estagiário");
             Console.WriteLine("      2 - Listar estagiários");
             Console.WriteLine("      3 - Deletar estagiário");
+            Console.Write("\n     Digite uma das opções acima [0, 1, 2, 3]: ");
 
             string valor = Console.ReadLine() ?? String.Empty;
 
@@ -38,6 +38,7 @@ namespace Funcoes
                 case "2": //LIST
                 
                     estagiarioRepositorio.List();
+                    Console.WriteLine("\nPressione 'enter' para voltar ao menu principal.");
                     break;
 
                 case "3":  //DELETE
