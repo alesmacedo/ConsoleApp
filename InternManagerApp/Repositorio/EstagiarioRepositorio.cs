@@ -100,7 +100,7 @@ namespace Repositorio
                 deleteCommand.ExecuteNonQuery();
                 Console.Clear();
                 Console.WriteLine("Estagiário deletado com sucesso!");
-                Console.WriteLine("\nPressione 'enter' para retornar ao menu principal.");
+                Console.WriteLine("\nPressione a tecla 'enter' para retornar ao menu principal.");
                 sqlConnection.Close();
                 Console.ReadKey();
             }
