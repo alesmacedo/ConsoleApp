@@ -38,9 +38,8 @@ namespace Funcoes
                 case "2": //LIST
                 
                     estagiarioRepositorio.List();
-                    Console.WriteLine("\nPressione 'enter' para voltar ao menu principal.");
+                    Console.WriteLine("\nPressione \"enter\" para voltar ao menu principal.");
                     break;
-
                 case "3":  //DELETE
                 
                     estagiarioRepositorio.Delete();

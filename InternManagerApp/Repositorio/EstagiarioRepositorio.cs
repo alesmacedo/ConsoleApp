@@ -29,7 +29,7 @@ namespace Repositorio
                  * https://docs.microsoft.com/pt-br/dotnet/csharp/language-reference/operators/null-coalescing-operator */
 
                 Console.Write("Informe a idade do estagiário:  ");
-                int userAge = int.Parse(Console.ReadLine() ?? string.Empty);
+                int userAge = int.Parse(Console.ReadLine() ?? string.Empty); //Null validation
 
                 Console.Write("Digite a squad na qual o estagiário pertence: ");
                 string userSquad = Console.ReadLine() ?? string.Empty;
